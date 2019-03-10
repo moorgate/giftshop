@@ -48,14 +48,9 @@ ul {
     }
   }
 
-  @media (min-width: 768px) {
-
-    .text-action {
-      display: block;
-    }
-
-    .icon-action {
-      display: none;
+  @media (max-width: 586px) {
+    .logo {
+      min-width: unset;
     }
   }
 
@@ -95,6 +90,24 @@ ul {
     align-items: center;
     padding: 0 20px;
     height: 40px;
+    
+    .icon-action {
+      display: none;
+    }
+
+    @media (max-width: 486px) {
+      background-color: unset;
+
+      .text-action {
+        display: none;
+      }
+
+      .icon-action {
+        display: block;
+        height: 100%;
+        width: 30px;
+      }
+    }
 
     a {
       color: white;
@@ -108,6 +121,10 @@ ul {
   list-style: none;
   display: flex;
   justify-content: space-around;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
 
   li {
     padding: 8px 0;

@@ -13,6 +13,12 @@ ul {
   list-style: none;
 }
 
+.desktop-hidden {
+  @media (min-width: 767px) {
+    display: none !important;
+  }
+}
+
 .bg_gray {
   background: url(../images/bg.jpg) #030303;
 }
@@ -24,6 +30,35 @@ ul {
   justify-content: flex-end;
   height: 40px;
 
+  @media (max-width: 767px) {
+    max-width: 767px;
+
+    .phone {
+      display: none;
+    }
+
+    .logo {
+      min-width: 300px;
+
+      .call-to-action {
+        @media (max-width: 586px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+
+    .text-action {
+      display: block;
+    }
+
+    .icon-action {
+      display: none;
+    }
+  }
+
   .header__text {
     display: flex;
     flex-grow: 2;
@@ -31,7 +66,8 @@ ul {
     align-items: center;
 
     .phone {
-      vertical-align: center;
+      vertical-align: middle;
+      min-width: 155px;
     }
 
     .phone-number {
@@ -59,6 +95,7 @@ ul {
     align-items: center;
     padding: 0 20px;
     height: 40px;
+
     a {
       color: white;
       text-decoration: none;

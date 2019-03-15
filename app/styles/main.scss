@@ -223,16 +223,34 @@ ul {
   .section-categories__body {
     display: flex;
     justify-content: space-around;
+    
+    img {
+      width: 100%;
+    }
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
   }
 
   .item-card {
     margin: 0 0 40px 0;
     padding: 20px 10px;
     border: 1px solid lightgray;
+    border-right: none;
     background: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    &:last-of-type {
+      border-right: 1px solid lightgray
+    }
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      border-right: 1px solid lightgray
+    }
 
     .item-card__title {
       font-size: 20px;

@@ -11,10 +11,18 @@ var wrapper = jQuery('#wrapper')
 var body = jQuery('body')
 buttons.click(function (e) {
   e.preventDefault()
-  if (modal) {
-    console.log(e, modal)
+  if (modal && wrapper && body) {
     modal.addClass('active')
     wrapper.addClass('overlapped')
     body.addClass('overlapped')
+  }
+})
+
+wrapper.click(function (e) {
+  e.preventDefault()
+  if (wrapper && modal && body && wrapper.hasClass('overlapped')) {
+    modal.removeClass('active')
+    wrapper.removeClass('overlapped')
+    body.removeClass('overlapped')
   }
 })

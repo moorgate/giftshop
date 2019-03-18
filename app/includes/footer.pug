@@ -1,20 +1,27 @@
 footer.footer
-    .footer-logo
-        img(src='images/js-logo.svg' alt='logo footer' width='200')
-    .about-us
+    .subscribe.content-block.desktop-hidden
+        form
+            p ПОДПИШИСЬ И ПОЛУЧИ СКИДКУ 10%
+            input.footer__form(value='e-mail' type='email')
+            input.footer__btn(type='button' value='ПОДПИШИСЬ')
+    .footer-logo.mobile-hidden
+          img(src='images/logo-new.png' alt='giftshop' height='25')
+    .about-us.content-block
         h5.footer__categories О НАС
         ul
             li Корпоративные подарки
             li Доставка и оплата
             li Сотрудничество
-    .contacts
+    .contacts.content-block
         h5.footer__categories КОНТАКТЫ
         ul
             li Корпоративные подарки
             li Доставка и оплата
             li Сотрудничество
-    .subscribe
+    .subscribe.content-block.mobile-hidden
         form
             p ПОДПИШИСЬ И ПОЛУЧИ СКИДКУ 10%
-            input.footer__form(value='e-mail')
+            input.footer__form(value='e-mail' type='email')
             input.footer__btn(type='button' value='ПОДПИШИСЬ')
+    .footer-logo.content-block.desktop-hidden
+          img(src='images/logo-new.png' alt='giftshop' height='25')

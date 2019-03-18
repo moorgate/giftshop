@@ -348,14 +348,43 @@ ul {
 
 .comment-box {
   display: flex;
-  max-width: 320px;
+  width: calc(100%/3);
   background-color: white;
   margin-bottom: 32px;
-  padding: 15px;
+  margin: 5px;
+  
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+  
+  @media (max-width: 1440px) and (min-width: 1024px) {
+    flex-direction: column;
+  }
+  
+  @media (max-width: 512px) {
+    flex-direction: column;
+  }
 
   img {
     padding-right: 15px;
   }
+}
+
+.comment-box__info--stars {
+  .star {
+    color: darkgoldenrod;
+    font-size: 2em;
+  }
+}
+
+.comment-box__info {
+  padding: 10px;
+}
+
+.comment-box__img {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .footer {

@@ -181,8 +181,14 @@
     transform: translate(-50%, -50%);
     border-radius: 5px;
     padding: unset;
-    min-width: 900px;
+    max-width: 900px;
     background-color: #D4D4D4;
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+    @media (max-width: $tablet-width) {
+        border-radius: 0;
+    }
 
     .modal {
         &-header{
@@ -190,7 +196,13 @@
             border-radius: 5px 5px 0 0;
             color: white;
             padding: 20px;
+            @media (max-width: $tablet-width) {
+                font-size:  1.2em;
+                padding: 10px;
+                border-radius: 0;
+            }
         }
+        height: unset;
     }
 }
 

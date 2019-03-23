@@ -15,7 +15,8 @@
     justify-content: center;
     align-items: center;
     input, textarea{
-        width: 850px;
+        max-width: 850px;
+        width: 100%;
         padding: 10px;
         border-radius: 5px;
         border: none;
@@ -32,6 +33,9 @@
             color: white;
             font-weight: bolder;
             font-size: 1.4em;
+            @media (max-width: $tablet-width) {
+                padding: 10px
+            }
         }
     }
 }

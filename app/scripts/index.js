@@ -47,6 +47,7 @@ jQuery(document).ready(function () {
       modal.removeClass('active')
       wrapper.removeClass('overlapped')
       body.removeClass('overlapped')
+      paymenModal.removeClass('active')
     }
   })
 })

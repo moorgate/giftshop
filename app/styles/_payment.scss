@@ -1,0 +1,6 @@
+#payment-modal {
+    display: none;
+    &.active{
+        display: block;
+    }
+}

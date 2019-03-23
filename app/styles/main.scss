@@ -3,6 +3,7 @@ $mobile-width: 767px;
 $tablet-width: 1128px;
 
 @import 'fonts';
+@import 'payment';
 
 /**
 * Start of reset
@@ -880,6 +881,9 @@ ul {
 }
 
 #modal {
+}
+
+.modal{
   background-color: white;
   top: 40px;
   left: 0px;
@@ -900,9 +904,7 @@ ul {
     height: 100%;
     overflow: scroll;
   }
-}
 
-.modal{
   &-header{
     width: 100%;
     text-align: center;

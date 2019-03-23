@@ -10,11 +10,17 @@ if (process.env.NODE_ENV !== 'production') {
 jQuery(document).ready(function () {
   var buttons = jQuery('button.buy-btn')
   var modal = jQuery('#modal')
+  var paymenModal = jQuery('#payment-modal')
   var wrapper = jQuery('#wrapper')
   var body = jQuery('body')
   buttons.click(function (e) {
     e.preventDefault()
-    if (modal && wrapper && body) {
+    if (
+      modal &&
+      wrapper &&
+      body &&
+      paymenModal
+    ) {
       modal.addClass('active')
       wrapper.addClass('overlapped')
       body.addClass('overlapped')
@@ -26,6 +32,11 @@ jQuery(document).ready(function () {
         slidesToScroll: 2,
         centerMode: true,
         variableWidth: true
+      })
+      modal.find('button.proceed-payment').click(function (e) {
+        e.preventDefault()
+        modal.removeClass('active')
+        paymenModal.addClass('active')
       })
     }
   })

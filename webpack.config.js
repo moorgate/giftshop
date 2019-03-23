@@ -77,8 +77,7 @@ const commonConfig = merge([
       new HtmlPlugin({
         template: './index.pug'
       }),
-      new FriendlyErrorsPlugin(),
-      new StylelintPlugin(lintStylesOptions)
+      new FriendlyErrorsPlugin()
     ],
     module: {
       noParse: /\.min\.js/

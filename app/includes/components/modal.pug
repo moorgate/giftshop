@@ -7,6 +7,14 @@
             .modal-column.modal-column--first
                 .modal-content.modal-content__image
                     img(src='images/giftbox1.png')
+                .modal-sizes.desktop-hidden
+                    .modal-sizes__header Доступные размеры для заказа
+                    .sizes
+                        .size.bolder(value="S") S
+                        .size.bolder(value="M") M
+                        .size.bolder(value="L") L
+                        .size.bolder(value="XL") XL
+                    a.dontknow(href='https://wikipedia.org' target='__blank') Я не знаю  свой размер
                 .modal-cost
                     .origin.bolder 100500 руб.
                     .new.bolder 10050 руб.
@@ -14,7 +22,7 @@
             .modal-column.modal-column--second
                 .modal-content__description
                     .description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                .modal-sizes
+                .modal-sizes.mobile-hidden
                     .modal-sizes__header Доступные размеры для заказа
                     .sizes
                         .size.bolder(value="S") S
@@ -24,19 +32,24 @@
                     a.dontknow(href='https://wikipedia.org' target='__blank') Я не знаю  свой размер
                 .modal-examples
                     .example
-                        img(src='images/giftbox1.png')
-                        .example-description LOREM IPSUM
+                        .example-content
+                            img(src='images/giftbox1.png')
+                            .example-description LOREM IPSUM
                     .example
-                        img(src='images/giftbox1.png')
-                        .example-description LOREM IPSUM
+                        .example-content
+                            img(src='images/giftbox1.png')
+                            .example-description LOREM IPSUM
                     .example
-                        img(src='images/giftbox1.png')
-                        .example-description LOREM IPSUM
+                        .example-content
+                            img(src='images/giftbox1.png')
+                            .example-description LOREM IPSUM
                     .example
-                        img(src='images/giftbox1.png')
-                        .example-description LOREM IPSUM
+                        .example-content
+                            img(src='images/giftbox1.png')
+                            .example-description LOREM IPSUM
                     .example
-                        img(src='images/giftbox1.png')
-                        .example-description LOREM IPSUM
+                        .example-content
+                            img(src='images/giftbox1.png')
+                            .example-description LOREM IPSUM
         
 #wrapper

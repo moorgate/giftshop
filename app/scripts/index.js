@@ -13,6 +13,22 @@ jQuery(document).ready(function () {
   var paymenModal = jQuery('#payment-modal')
   var wrapper = jQuery('#wrapper')
   var body = jQuery('body')
+
+  function closeModals (e) {
+    if (e) e.preventDefault()
+    if (wrapper && modal && body && wrapper.hasClass('overlapped')) {
+      modal.removeClass('active')
+      wrapper.removeClass('overlapped')
+      body.removeClass('overlapped')
+      paymenModal.removeClass('active')
+    }
+  }
+
+  jQuery(document).keyup(function (e) {
+    if (e.key === 'Escape') {
+      closeModals(e)
+    }
+  })
   if (screen.width < 512) {
     jQuery('.comments').slick({
       infinite: true,
@@ -56,12 +72,6 @@ jQuery(document).ready(function () {
   })
 
   wrapper.click(function (e) {
-    e.preventDefault()
-    if (wrapper && modal && body && wrapper.hasClass('overlapped')) {
-      modal.removeClass('active')
-      wrapper.removeClass('overlapped')
-      body.removeClass('overlapped')
-      paymenModal.removeClass('active')
-    }
+    closeModals(e)
   })
 })

@@ -218,12 +218,12 @@ ul {
     background-color: $color-orange;
     color: white;
     font-weight: bolder;
-    padding: 30px;
+    padding: 10px 25px;
     border-radius: 30px;
-    height: 40px;
     justify-content: center;
     align-items: center;
     display: flex;
+    font-size: 1.2em;
 
     @media (max-width: $mobile-width) {
       span{

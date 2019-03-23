@@ -15,12 +15,14 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  margin: 0;
+    margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
+    box-sizing: border-box;
+    font-weight: lighter;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* make sure to set some focus styles for accessibility */
@@ -210,6 +212,8 @@ textarea {
     margin: 0; /* 2 */
     vertical-align: baseline; /* 3 */
     *vertical-align: middle; /* 3 */
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 /**

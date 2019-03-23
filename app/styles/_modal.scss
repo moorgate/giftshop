@@ -1,0 +1,221 @@
+.modal{
+    background-color: white;
+    top: 40px;
+    left: 0px;
+    right: 0px;
+    position: fixed;
+    z-index: 2;
+    padding-bottom: 40px;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+  
+    &.active{
+        display: flex;
+    }
+  
+    @media (max-width: $tablet-width) {
+        top: 0;
+        height: 100%;
+        overflow: scroll;
+    }
+  
+    &-header{
+        width: 100%;
+        text-align: center;
+        font-size: 2em;
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+  
+    &-content{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        @media (max-width: $tablet-width) {
+            flex-direction: column;
+        }
+    }
+  
+    &-column{
+        padding: 5px;
+        &--first{
+            width: 30%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            @media (max-width: $tablet-width) {
+                width: 100%;
+            }
+        }
+        &--second{
+            width: 70%;
+            @media (max-width: $tablet-width) {
+                width: 100%;
+            }
+        }
+    }
+  
+    &-content{
+        &__image{
+            width: 100%;
+            img{
+                width:  100%;
+            }
+        }
+  
+        &__description{
+            font-size: 1.2em;
+            padding-top: 10px;
+            padding-bottom: 15px;
+        }
+    }
+  
+    &-cost{
+        .origin{
+            font-size: 1.4em;
+            position: relative;
+            display: inline-block;
+            padding: 10px 0 5px;
+            text-align: center;
+            width: 100%;
+            &:after{
+                content: '';
+                position: absolute;
+                top: calc(50% + 2px);
+                left: 0;
+                height: 2px;
+                background-color: black;
+                width: 100%;
+            }
+        }
+        .new{
+            font-size: 2.2em;
+            padding: 10px 0 20px;
+            text-align: center;
+            width: 100%;
+        }
+    }
+  
+    &-btn{
+        background-color: red;
+        color: white;
+        text-align: center;
+        font-weight: bolder;
+        padding: 10px;
+        font-weight: bolder;
+        border-radius: 30px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-size: 1.5em;
+        width: 60%;
+        border: none;
+        display: flex;
+        box-sizing: content-box;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+  
+    &-sizes{
+        padding-top: 15px;
+        &__header{
+            padding-bottom: 10px;
+            font-size: 1.2em;
+        }
+  
+        .sizes{
+            display: flex;
+            padding: 5px 0 10px 0;
+        }
+  
+        .size{
+            width: 60px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 10px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+  
+        .dontknow{
+            font-size: 1.2em;
+            text-decoration: none;
+            color: unset;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+  
+    &-examples{
+        display: flex;
+        padding-top: 150px;
+        .example{
+            width: 200px;
+            img{
+                width: 100%;
+            }
+            &-description{
+                font-size: 1.4em;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.modal--express{
+    left: 50%;
+    top: 50%;
+    right: unset;
+    bottom: unset;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    padding: unset;
+    min-width: 900px;
+    background-color: #D4D4D4;
+
+    .modal {
+        &-header{
+            background-color: black;
+            border-radius: 5px 5px 0 0;
+            color: white;
+            padding: 20px;
+        }
+    }
+}
+
+.modal-wrapper {
+    width: 100%;
+    @media (max-width: $tablet-width) {
+        flex-direction: column
+    }
+}
+
+#wrapper{
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+
+    display: none;
+
+    &:hover{
+        cursor: pointer;
+    }
+    &.overlapped{
+        display: block;
+    }
+}

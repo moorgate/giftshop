@@ -184,7 +184,7 @@ ul {
   padding-top: 10px;
   padding-bottom: 10px;
 
-  @media (max-width: 768px) {
+  @media (max-width: $tablet-width) {
     flex-direction: column;
   }
 
@@ -218,8 +218,8 @@ ul {
     background-color: $color-orange;
     color: white;
     font-weight: bolder;
-    padding: 10px 20px;
-    border-radius: 20px;
+    padding: 30px;
+    border-radius: 30px;
     height: 40px;
     justify-content: center;
     align-items: center;
@@ -273,6 +273,7 @@ ul {
     margin: 32px 0;
     align-self: center;
     font-weight: 100;
+    font-size: 1.6em;
 
     .h2--bold {
       font-weight: bold;
@@ -364,6 +365,7 @@ ul {
     margin: 32px 0;
     align-self: center;
     font-weight: 100;
+    font-size: 1.6em;
 
     .h2--bold {
       font-weight: bold;

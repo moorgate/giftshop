@@ -56,7 +56,7 @@ jQuery(document).ready(function () {
       body.addClass('overlapped')
       jQuery('.modal-examples').slick({
         dots: true,
-        arrows: true,
+        arrows: false,
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,

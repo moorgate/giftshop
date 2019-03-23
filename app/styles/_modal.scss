@@ -58,6 +58,9 @@
     }
   
     &-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         &__image{
             width: 100%;
             img{
@@ -163,7 +166,10 @@
         .example{
             width: 200px;
             img{
-                width: 100%;
+                width: 200px;
+                @media (max-width: $tablet-width) {
+                    width: 100%;
+                }
             }
             &-description{
                 font-size: 1.4em;

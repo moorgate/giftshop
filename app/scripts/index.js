@@ -12,6 +12,20 @@ jQuery(document).ready(function () {
   var modal = jQuery('#modal')
   var wrapper = jQuery('#wrapper')
   var body = jQuery('body')
+  if (screen.width < 512) {
+    jQuery('.comments').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    })
+  } else {
+    jQuery('.comments').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 3
+    })
+  }
+
   buttons.click(function (e) {
     e.preventDefault()
     if (modal && wrapper && body) {
@@ -22,8 +36,8 @@ jQuery(document).ready(function () {
         dots: true,
         arrows: true,
         infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 2,
+        slidesToShow: 3,
+        slidesToScroll: 1,
         centerMode: true,
         variableWidth: true
       })

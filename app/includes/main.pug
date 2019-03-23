@@ -2,7 +2,7 @@
     section.section-promo.bg_gray
       include components/promo
 
-    section.section-categories
+    section.section-categories#favorite-series
         h2.section-categories__title ЛЮБИМЫЕ&nbsp;
             span.h2--bold СЕРИАЛЫ
         .section-categories__body
@@ -10,7 +10,7 @@
             include components/item-card
             include components/item-card
 
-    section.section-categories.bg_gray
+    section.section-categories.bg_gray#favorite-cartoons
         h2.section-categories__title ЛЮБИМЫЕ&nbsp;
             span.h2--bold МУЛЬТФИЛЬМЫ
         .section-categories__body
@@ -18,7 +18,7 @@
             include components/item-card
             include components/item-card
 
-    section.section-categories
+    section.section-categories#favorite-games
         h2.section-categories__title ЛЮБИМЫЕ&nbsp;
             span.h2--bold ИГРЫ
         .section-categories__body
@@ -62,7 +62,10 @@
     section.section-categories.bg_gray
         h2.section-categories__title ЧТО ЛЮДИ ГОВОРЯТ&nbsp;
             span.h2--bold О НАС?
-        .section-categories__body
+        .section-categories__body.comments
+          include components/comment.pug
+          include components/comment.pug
+          include components/comment.pug
           include components/comment.pug
           include components/comment.pug
           include components/comment.pug

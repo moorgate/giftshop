@@ -33,6 +33,7 @@ module.exports = {
     'import/default': 2,
     'import/export': 2,
     'no-console': 1,
-    'curly': 0
+    'curly': 0,
+    'no-debugger': 0,
   }
 }

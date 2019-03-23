@@ -10,9 +10,31 @@ if (process.env.NODE_ENV !== 'production') {
 jQuery(document).ready(function () {
   var buttons = jQuery('button.buy-btn')
   var modal = jQuery('#modal')
-  var paymenModal = jQuery('#payment-modal')
+  var paymentModal = jQuery('#payment-modal')
   var wrapper = jQuery('#wrapper')
   var body = jQuery('body')
+  var callbackButton = jQuery('.callback-btn')
+  var callbackModal = jQuery('#callback-modal')
+
+  if (callbackButton) {
+    debugger
+    callbackButton.click(function (e) {
+      e.preventDefault()
+      if (
+        wrapper &&
+        callbackModal
+      ) {
+        if (!wrapper.hasClass('overlapped')) {
+          wrapper.addClass('overlapped')
+        } else {
+          paymentModal.removeClass('active')
+          modal.removeClass('active')
+        }
+
+        callbackModal.addClass('active')
+      }
+    })
+  }
 
   function closeModals (e) {
     if (e) e.preventDefault()
@@ -20,7 +42,8 @@ jQuery(document).ready(function () {
       modal.removeClass('active')
       wrapper.removeClass('overlapped')
       body.removeClass('overlapped')
-      paymenModal.removeClass('active')
+      paymentModal.removeClass('active')
+      callbackModal.removeClass('active')
     }
   }
 
@@ -45,19 +68,13 @@ jQuery(document).ready(function () {
     })
   }
 
-  modal.find('button.callback-btn').click(function (e) {
-    e.preventDefault()
-    modal.removeClass('active')
-    paymenModal.addClass('active')
-  })
-
   buttons.click(function (e) {
     e.preventDefault()
     if (
       modal &&
       wrapper &&
       body &&
-      paymenModal
+      paymentModal
     ) {
       modal.addClass('active')
       wrapper.addClass('overlapped')
@@ -74,7 +91,7 @@ jQuery(document).ready(function () {
       modal.find('button.proceed-payment').click(function (e) {
         e.preventDefault()
         modal.removeClass('active')
-        paymenModal.addClass('active')
+        paymentModal.addClass('active')
       })
     }
   })

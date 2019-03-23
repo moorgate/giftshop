@@ -19,7 +19,7 @@ const lintJSOptions = {
   failOnError: true,
 
   // Toggle autofix
-  fix: true,
+  // fix: true,
   cache: true,
 
   formatter: require('eslint-friendly-formatter')

@@ -45,6 +45,12 @@ jQuery(document).ready(function () {
     })
   }
 
+  modal.find('button.callback-btn').click(function (e) {
+    e.preventDefault()
+    modal.removeClass('active')
+    paymenModal.addClass('active')
+  })
+
   buttons.click(function (e) {
     e.preventDefault()
     if (

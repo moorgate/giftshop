@@ -1,0 +1,31 @@
+style .tinkoffPayRow{display:block;margin:1%;width:160px;}
+script(src="https://securepay.tinkoff.ru/html/payForm/js/tinkoff_v2.js")
+
+#payment-modal.modal.modal--express
+    .modal-wrapper
+        .modal-header
+            span ЭКСПРЕСС ПЛАТЕЖ
+        .modal-content
+            form(name="TinkoffPayForm" onsubmit="pay(this); return false;")
+                .payment-row
+                    input.tinkoffPayRow(type="hidden" name="terminalkey" value="TinkoffBankTest")
+                .payment-row
+                    input.tinkoffPayRow(type="hidden" name="frame" value="false")
+                .payment-row
+                    input.tinkoffPayRow(type="hidden" name="language" value="ru")
+                .payment-row
+                    input.tinkoffPayRow(type="text" placeholder="Сумма заказа:" name="amount" readonly="readonly" required)
+                .payment-row
+                    input.tinkoffPayRow(type="text" placeholder="Номер заказа:" name="order" readonly="readonly")
+                .payment-row
+                    input.tinkoffPayRow(type="text" placeholder="Описание заказа:" name="description" readonly="readonly")
+                .payment-row
+                    input.tinkoffPayRow(type="text" placeholder="ФИО плательщика:" name="name")
+                .payment-row
+                    input.tinkoffPayRow(type="text" placeholder="E-mail:" name="email")
+                .payment-row
+                    input.tinkoffPayRow(type="text" placeholder="Контактный телефон:" name="phone")
+                .payment-row.payment-row--comment
+                    textarea(placeholder="Комментарий к заказу")
+                .payment-row.payment-row--button
+                    input(class="tinkoffPayRow" type="submit" value="ОПЛАТИТЬ")

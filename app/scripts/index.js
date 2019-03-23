@@ -32,12 +32,14 @@ jQuery(document).ready(function () {
   if (screen.width < 512) {
     jQuery('.comments').slick({
       infinite: true,
+      arrows: false,
       slidesToShow: 1,
       slidesToScroll: 1
     })
   } else {
     jQuery('.comments').slick({
       infinite: true,
+      arrows: false,
       slidesToShow: 3,
       slidesToScroll: 3
     })

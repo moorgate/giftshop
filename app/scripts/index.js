@@ -14,6 +14,9 @@ function isBlank (obj) {
 var promoCodeUrl = 'https://us-central1-nouvo-5b54a.cloudfunctions.net/promoCode'
 
 jQuery(document).ready(function () {
+  // eslint-disable-next-line no-unused-vars
+  var selectedSize = null
+
   var buttons = jQuery('button.buy-btn')
   var modal = jQuery('#modal')
   var paymentModal = jQuery('#payment-modal')
@@ -26,6 +29,19 @@ jQuery(document).ready(function () {
   var promoButton = promoForm.find('input[type="submit"]')
   var promoOK = promoForm.find('.ok')
   var promoErr = promoForm.find('.err')
+  var sizesButtons = jQuery('#item-sizes')
+  var sizes = sizesButtons.find('.size')
+
+  sizes.click(function (e) {
+    var target = jQuery(e.target)
+    selectedSize = target.attr('value')
+    target.addClass('active')
+    sizes.each(function (index) {
+      if (jQuery(this).attr('value') !== selectedSize) {
+        jQuery(this).removeClass('active')
+      }
+    })
+  })
 
   var foundPromo = window.localStorage.getItem('promoCode')
   if (foundPromo) {
@@ -78,6 +94,8 @@ jQuery(document).ready(function () {
       body.removeClass('overlapped')
       paymentModal.removeClass('active')
       callbackModal.removeClass('active')
+
+      selectedSize = null
     }
   }
 

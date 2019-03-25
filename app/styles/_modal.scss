@@ -146,8 +146,13 @@
             justify-content: center;
             align-items: center;
             margin: 0 10px;
+            transition: background-color ease 0.2s;
             &:hover{
                 cursor: pointer;
+                background-color: $color-light-orange;
+            }
+            &.active{
+                background-color: $color-orange;
             }
         }
   

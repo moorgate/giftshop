@@ -1,6 +1,7 @@
 $mobile-width: 767px;
 $tablet-width: 1128px;
 $color-orange: #ff7f00;
+$color-light-orange: #D47500;
 
 @import 'fonts';
 @import 'modal';
@@ -559,7 +560,9 @@ ul {
     align-items: center;
 
     .ok{
-      width: 40px;
+      img{
+        height: 40px
+      }
     }
 
     .ok, .err{

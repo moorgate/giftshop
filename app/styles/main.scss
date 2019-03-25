@@ -589,6 +589,11 @@ ul {
         border-color: $color-orange;
         color: white;
       }
+      &[disabled]{
+        background-color: $color-light-orange;
+        border-color: $color-light-orange;
+        color: lightgray;
+      }
     }
   }
 }

@@ -554,6 +554,21 @@ ul {
   border-top: 1px solid rgb(225,225,225);
   form{
     padding-top: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .ok{
+      width: 40px;
+    }
+
+    .ok, .err{
+      display: none;
+      padding-left: 20px;
+      &.active{
+        display: block;
+      }
+    }
   }
   input {
     border-style: unset;

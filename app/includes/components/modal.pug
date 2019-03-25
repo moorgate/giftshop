@@ -35,9 +35,12 @@
                     .h5 У вас есть промо код на скидку?
                     br
                     .h5 Введите ниже
-                    form
-                        input
+                    form#promo
+                        input(type="text")
                         input.active(type="submit" value="Применить")
+                        .ok
+                            img(src='images/check.svg')
+                        .err Вы ввели неправильный  промо код
                 .modal-examples
                     .example
                         .example-content

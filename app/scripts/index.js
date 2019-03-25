@@ -17,7 +17,6 @@ jQuery(document).ready(function () {
   var callbackModal = jQuery('#callback-modal')
 
   if (callbackButton) {
-    debugger
     callbackButton.click(function (e) {
       e.preventDefault()
       if (

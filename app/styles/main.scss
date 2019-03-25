@@ -35,6 +35,10 @@ body {
   font-size: 1.4em;
 }
 
+.h5{
+  font-size: 1.2em;
+}
+
 ul {
   list-style: none;
 }
@@ -542,4 +546,31 @@ ul {
 
 .slick-slide{
   margin: 0 10px !important;
+}
+
+.modal-promo{
+  margin-top: 20px;
+  padding: 40px 20px 20px 0;
+  border-top: 1px solid rgb(225,225,225);
+  form{
+    padding-top: 40px;
+  }
+  input {
+    border-style: unset;
+    border: 1px solid rgb(191,191,191);
+    padding: 10px 5px;
+    border-radius: 5px 0 0 5px;
+    border-right: none;
+    width: 300px;
+    &[type="submit"] {
+      border-radius: 0 5px 5px 0;
+      border-right: 1px solid rgb(191,191,191);
+      width: 125px;
+      &.active{
+        background-color: $color-orange;
+        border-color: $color-orange;
+        color: white;
+      }
+    }
+  }
 }

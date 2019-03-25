@@ -18,10 +18,11 @@
                 .modal-cost
                     .origin.bolder 100500 руб.
                     .new.bolder 10050 руб.
-                button.modal-btn.proceed-payment Заказать
+                button.modal-btn.proceed-payment Заказать 
             .modal-column.modal-column--second
                 .modal-content__description
-                    .description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    .description
+                        span Данный набор включает в себя 5 футболок, в подарочном оформлении. Это замечательный подарок на день рождения или на праздник родным.
                 .modal-sizes.mobile-hidden
                     .modal-sizes__header Доступные размеры для заказа
                     .sizes
@@ -30,6 +31,13 @@
                         .size.bolder(value="L") L
                         .size.bolder(value="XL") XL
                     a.dontknow(href='https://wikipedia.org' target='__blank') Я не знаю  свой размер
+                .modal-promo
+                    .h5 У вас есть промо код на скидку?
+                    br
+                    .h5 Введите ниже
+                    form
+                        input
+                        input.active(type="submit" value="Применить")
                 .modal-examples
                     .example
                         .example-content

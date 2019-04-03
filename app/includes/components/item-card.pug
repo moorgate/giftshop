@@ -1,5 +1,7 @@
-.item-card
-    h5.h3.item-card__title ADVENTURE TIME
-    img(src='https://firebasestorage.googleapis.com/v0/b/nouvo-5b54a.appspot.com/o/IMG_6723_custom_small.jpg?alt=media&token=fd506404-d56d-41ff-9763-9564aa21e864')
-    .item-card__price 4900 руб.
-    button.item-card__btn.buy-btn(set-id: 'asdJKJK36HJjjjhjhJHJHKLOMfasdfdsf') КУПИТЬ
+mixin itemCardTemplate(setId, setImage, setTitle, setCost)
+    .item-card
+        h5.h3.item-card__title= setTitle
+        
+        img(src=setImage)
+        .item-card__price= setCost+' руб.'
+        button.item-card__btn.buy-btn(set-id=setId) КУПИТЬ

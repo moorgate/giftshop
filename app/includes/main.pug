@@ -1,4 +1,6 @@
-include components/payments.pug
+include components/item-card
+include components/modal
+include components/payments
 .wrapper-main
     section.section-promo.bg_gray
       include components/promo
@@ -7,25 +9,34 @@ include components/payments.pug
         h2.section-categories__title ЛЮБИМЫЕ&nbsp;
             span.h2--bold СЕРИАЛЫ
         .section-categories__body
-            include components/item-card
-            include components/item-card
-            include components/item-card
+            +itemCardTemplate('game-of-thrones-1', 'https://firebasestorage.googleapis.com/v0/b/nouvo-5b54a.appspot.com/o/IMG_6723_custom_small.jpg?alt=media&token=fd506404-d56d-41ff-9763-9564aa21e864', 'GAME OF THRONES', 5600)
+            +itemCardTemplate('harry-potter-1', 'https://firebasestorage.googleapis.com/v0/b/nouvo-5b54a.appspot.com/o/IMG_6723_custom_small.jpg?alt=media&token=fd506404-d56d-41ff-9763-9564aa21e864', 'HARRY POTTER', 5600)
+            +itemCardTemplate('star-wars-1', 'https://firebasestorage.googleapis.com/v0/b/nouvo-5b54a.appspot.com/o/IMG_6723_custom_small.jpg?alt=media&token=fd506404-d56d-41ff-9763-9564aa21e864', 'STAR WARS', 5600)
+            +modalTemplate('game-of-thrones-1', 'https://firebasestorage.googleapis.com/v0/b/nouvo-5b54a.appspot.com/o/IMG_6723_custom_small.jpg?alt=media&token=fd506404-d56d-41ff-9763-9564aa21e864', 'GAME OF THRONES', 5600, 6200)
+            +modalTemplate('harry-potter-1', 'https://firebasestorage.googleapis.com/v0/b/nouvo-5b54a.appspot.com/o/IMG_6723_custom_small.jpg?alt=media&token=fd506404-d56d-41ff-9763-9564aa21e864', 'HARRY POTTER', 5600, 6200)
+            +modalTemplate('star-wars-1', 'https://firebasestorage.googleapis.com/v0/b/nouvo-5b54a.appspot.com/o/IMG_6723_custom_small.jpg?alt=media&token=fd506404-d56d-41ff-9763-9564aa21e864', 'STAR WARS', 5600, 6200)
 
     section.section-categories.bg_gray#favorite-cartoons
         h2.section-categories__title ЛЮБИМЫЕ&nbsp;
             span.h2--bold МУЛЬТФИЛЬМЫ
         .section-categories__body
-            include components/item-card
-            include components/item-card
-            include components/item-card
+            +itemCardTemplate('rickmorty-1', 'https://firebasestorage.googleapis.com/v0/b/nouvo-5b54a.appspot.com/o/IMG_6723_custom_small.jpg?alt=media&token=fd506404-d56d-41ff-9763-9564aa21e864', 'RICK&MORTY', 5600)
+            +itemCardTemplate('adventure-time-1', 'https://firebasestorage.googleapis.com/v0/b/nouvo-5b54a.appspot.com/o/IMG_6723_custom_small.jpg?alt=media&token=fd506404-d56d-41ff-9763-9564aa21e864', 'ADVENTURE TIME', 5600)
+            +itemCardTemplate('mlp-1', 'https://firebasestorage.googleapis.com/v0/b/nouvo-5b54a.appspot.com/o/IMG_6723_custom_small.jpg?alt=media&token=fd506404-d56d-41ff-9763-9564aa21e864', 'MY LITTLE PONY', 5600)
+            +modalTemplate('rickmorty-1', 'https://firebasestorage.googleapis.com/v0/b/nouvo-5b54a.appspot.com/o/IMG_6723_custom_small.jpg?alt=media&token=fd506404-d56d-41ff-9763-9564aa21e864', 'RICK&MORTY', 5600, 6500)
+            +modalTemplate('adventure-time-1', 'https://firebasestorage.googleapis.com/v0/b/nouvo-5b54a.appspot.com/o/IMG_6723_custom_small.jpg?alt=media&token=fd506404-d56d-41ff-9763-9564aa21e864', 'ADVENTURE TIME', 5600, 6500)
+            +modalTemplate('mlp-1', 'https://firebasestorage.googleapis.com/v0/b/nouvo-5b54a.appspot.com/o/IMG_6723_custom_small.jpg?alt=media&token=fd506404-d56d-41ff-9763-9564aa21e864', 'MY LITTLE PONY', 5600, 6500)
 
     section.section-categories#favorite-games
         h2.section-categories__title ЛЮБИМЫЕ&nbsp;
             span.h2--bold ИГРЫ
         .section-categories__body
-            include components/item-card
-            include components/item-card
-            include components/item-card
+            +itemCardTemplate('fallout-1', 'https://firebasestorage.googleapis.com/v0/b/nouvo-5b54a.appspot.com/o/IMG_6723_custom_small.jpg?alt=media&token=fd506404-d56d-41ff-9763-9564aa21e864', 'FALLOUT', 5600)
+            +itemCardTemplate('the-witcher-1', 'https://firebasestorage.googleapis.com/v0/b/nouvo-5b54a.appspot.com/o/IMG_6723_custom_small.jpg?alt=media&token=fd506404-d56d-41ff-9763-9564aa21e864', 'THE WITCHER', 5600)
+            +itemCardTemplate('call-of-duty-1', 'https://firebasestorage.googleapis.com/v0/b/nouvo-5b54a.appspot.com/o/IMG_6723_custom_small.jpg?alt=media&token=fd506404-d56d-41ff-9763-9564aa21e864', 'CALL OF DUTY', 5600)
+            +modalTemplate('fallout-1', 'https://firebasestorage.googleapis.com/v0/b/nouvo-5b54a.appspot.com/o/IMG_6723_custom_small.jpg?alt=media&token=fd506404-d56d-41ff-9763-9564aa21e864', 'FALLOUT', 5600, 6200)
+            +modalTemplate('the-witcher-1', 'https://firebasestorage.googleapis.com/v0/b/nouvo-5b54a.appspot.com/o/IMG_6723_custom_small.jpg?alt=media&token=fd506404-d56d-41ff-9763-9564aa21e864', 'THE WITCHER', 5600, 6200)
+            +modalTemplate('call-of-duty-1', 'https://firebasestorage.googleapis.com/v0/b/nouvo-5b54a.appspot.com/o/IMG_6723_custom_small.jpg?alt=media&token=fd506404-d56d-41ff-9763-9564aa21e864', 'CALL OF DUTY', 5600, 6200)
 
     section.section-features.bg_gray
         h2.section-categories__title ПОЧЕМУ СТОИТ&nbsp;
@@ -70,4 +81,3 @@ include components/payments.pug
           include components/comment.pug
           include components/comment.pug
           include components/comment.pug
-

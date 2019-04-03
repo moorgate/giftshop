@@ -1,66 +1,65 @@
-#modal.modal
-    .modal-wrapper
-        .modal-header
-            span ЧТО  ВХОДИТ В НАБОР 
-            span.bolder ADVENTURE TIME
-        .modal-content
-            .modal-column.modal-column--first
-                .modal-content.modal-content__image
-                    img(src='images/giftbox1.png')
-                .modal-sizes.desktop-hidden
-                    .modal-sizes__header Доступные размеры для заказа
-                    .sizes
-                        .size.bolder(value="S") S
-                        .size.bolder(value="M") M
-                        .size.bolder(value="L") L
-                        .size.bolder(value="XL") XL
-                    a.dontknow(href='https://wikipedia.org' target='__blank') Я не знаю  свой размер
-                .modal-cost
-                    .origin.bolder 100500 руб.
-                    .new.bolder 10050 руб.
-                button.modal-btn.proceed-payment Заказать 
-            .modal-column.modal-column--second
-                .modal-content__description
-                    .description
-                        span Данный набор включает в себя 5 футболок, в подарочном оформлении. Это замечательный подарок на день рождения или на праздник родным.
-                .modal-sizes.mobile-hidden
-                    .modal-sizes__header Доступные размеры для заказа
-                    #item-sizes.sizes
-                        .size.bolder(value="S") S
-                        .size.bolder(value="M") M
-                        .size.bolder(value="L") L
-                        .size.bolder(value="XL") XL
-                    a.dontknow(href='https://wikipedia.org' target='__blank') Я не знаю  свой размер
-                .modal-promo
-                    .h5 У вас есть промо код на скидку?
-                    br
-                    .h5 Введите ниже
-                    form#promo
-                        input(type="text")
-                        input.active(type="submit" value="Применить")
-                        .ok
-                            img(src='images/check.svg')
-                        .err Вы ввели неправильный  промо код
-                .modal-examples
-                    .example
-                        .example-content
-                            img(src='images/giftbox1.png')
-                            .example-description LOREM IPSUM
-                    .example
-                        .example-content
-                            img(src='images/giftbox1.png')
-                            .example-description LOREM IPSUM
-                    .example
-                        .example-content
-                            img(src='images/giftbox1.png')
-                            .example-description LOREM IPSUM
-                    .example
-                        .example-content
-                            img(src='images/giftbox1.png')
-                            .example-description LOREM IPSUM
-                    .example
-                        .example-content
-                            img(src='images/giftbox1.png')
-                            .example-description LOREM IPSUM
-        
-#wrapper
+mixin modalTemplate(setId, setImage, setTitle, setCost, setPreviousCost)
+    .modal(id='modal-'+setId)
+        .modal-wrapper
+            .modal-header
+                span ЧТО  ВХОДИТ В НАБОР 
+                span.bolder= setTitle
+            .modal-content
+                .modal-column.modal-column--first
+                    .modal-content.modal-content__image
+                        img(src=setImage)
+                    .modal-sizes.desktop-hidden
+                        .modal-sizes__header Доступные размеры для заказа
+                        .sizes
+                            .size.bolder(value="S") S
+                            .size.bolder(value="M") M
+                            .size.bolder(value="L") L
+                            .size.bolder(value="XL") XL
+                        a.dontknow(href='https://wikipedia.org' target='__blank') Я не знаю  свой размер
+                    .modal-cost
+                        .origin.bolder= setPreviousCost+' руб.'
+                        .new.bolder= setCost+' руб.'
+                    button.modal-btn.proceed-payment Заказать 
+                .modal-column.modal-column--second
+                    .modal-content__description
+                        .description
+                            span Данный набор включает в себя 5 футболок, в подарочном оформлении. Это замечательный подарок на день рождения или на праздник родным.
+                    .modal-sizes.mobile-hidden
+                        .modal-sizes__header Доступные размеры для заказа
+                        .sizes(id='item-sizes-'+setId)
+                            .size.bolder(value="S") S
+                            .size.bolder(value="M") M
+                            .size.bolder(value="L") L
+                            .size.bolder(value="XL") XL
+                        a.dontknow(href='https://wikipedia.org' target='__blank') Я не знаю  свой размер
+                    .modal-promo
+                        .h5 У вас есть промо код на скидку?
+                        br
+                        .h5 Введите ниже
+                        form(id='promo-'+setId)
+                            input(type="text")
+                            input.active(type="submit" value="Применить")
+                            .ok
+                                img(src='images/check.svg')
+                            .err Вы ввели неправильный  промо код
+                    .modal-examples
+                        .example
+                            .example-content
+                                img(src='images/giftbox1.png')
+                                .example-description LOREM IPSUM
+                        .example
+                            .example-content
+                                img(src='images/giftbox1.png')
+                                .example-description LOREM IPSUM
+                        .example
+                            .example-content
+                                img(src='images/giftbox1.png')
+                                .example-description LOREM IPSUM
+                        .example
+                            .example-content
+                                img(src='images/giftbox1.png')
+                                .example-description LOREM IPSUM
+                        .example
+                            .example-content
+                                img(src='images/giftbox1.png')
+                                .example-description LOREM IPSUM
